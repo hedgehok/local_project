@@ -1,5 +1,8 @@
 # Готовые решения по битриксу из личного опыта
 
+### Добавить цели на сайт (google)
+    https://developers.google.com/analytics/devguides/collection/analyticsjs/events
+
 ### Социальные иконки на сайт
 Подключаем плагин
 
