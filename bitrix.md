@@ -25,7 +25,7 @@
         }
 
 ### Текущее доменное имя
-$_SERVER['HTTP_HOST']
+      $_SERVER['HTTP_HOST']
 
 ### Проверка главной страницы
         <?if($APPLICATION->GetCurDir() == '/' && ($_SERVER['SCRIPT_NAME'] == '/index.php')):?>
