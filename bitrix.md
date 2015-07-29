@@ -1,5 +1,17 @@
 # Готовые решения по битриксу из личного опыта
 
+### Пример работы с куками (php)
+Чтение (для примера целое число)
+
+	$visit_counter = 0;
+	if ( isset($_COOKIE['visitCounter']) && is_numeric($_COOKIE['visitCounter']) ) {
+		$visit_counter = $_COOKIE['visitCounter'] * 1;
+	}
+
+Запись
+
+	setcookie("visitCounter", $visit_counter, time()+3600);  /* срок действия 1 час */
+
 ### Ajax обновление блока
     function refreshBlock(class_name) {
 		var selector = '.'+class_name;
