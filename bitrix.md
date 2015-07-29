@@ -7,10 +7,19 @@
 	if ( isset($_COOKIE['visitCounter']) && is_numeric($_COOKIE['visitCounter']) ) {
 		$visit_counter = $_COOKIE['visitCounter'] * 1;
 	}
+	
+	$last_visit = '';
+	if ( isset($_COOKIE['lastVisit']) ) {
+		$last_visit = htmlspecialchars($_COOKIE['lastVisit'], ENT_QUOTES);
+		$last_visit = stripslashes(trim($last_visit));
+	}
 
 Запись
 
+	setcookie("visitCounter", $value);
+	// или со сроком действия
 	setcookie("visitCounter", $visit_counter, time()+3600);  /* срок действия 1 час */
+	setcookie("lastVisit", date('d/m/Y H:i:s'));
 
 ### Ajax обновление блока
     function refreshBlock(class_name) {
