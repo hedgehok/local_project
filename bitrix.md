@@ -3,6 +3,10 @@
 ### Пример работы с сессией
 	session_start();
 	$_SESSION['pages'][] = $_SERVER['PHP_SELF'];
+	
+	if ( isset($_SESSION['name']) ) {
+		echo $_SESSION['name'];
+	}
 
 ### Пример работы с куками (php)
 Чтение (для примера целое число)
