@@ -1,5 +1,23 @@
 # Готовые решения по битриксу из личного опыта
 
+### Ajax обновление блока
+    function refreshBlock(class_name) {
+		var selector = '.'+class_name;
+		if($(selector).length) {
+			$.ajax({type: "POST", url: $(selector).attr('data-ajax'), success: function(data) {
+				$(selector).html(data);				
+			}});
+		}
+	}
+
+### Формат даты - текущая и через 30 дней
+    "DATE_ACTIVE_FROM" => ConvertTimeStamp(time(), "FULL"),
+    "DATE_ACTIVE_TO" => ConvertTimeStamp(time()+ 60*60*24*30, "FULL"),
+
+### Ресайз картинки EXACTом
+    $pic = CFile::ResizeImageGet($arItem["DETAIL_PICTURE"], array('width'=>220, 'height'=>150), BX_RESIZE_IMAGE_EXACT, true);
+    src="<?=$pic["src"]?>"
+
 ### Добавить цели на сайт (google)
     https://developers.google.com/analytics/devguides/collection/analyticsjs/events
 
