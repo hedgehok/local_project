@@ -1,5 +1,36 @@
 # Готовые решения по битриксу из личного опыта
 
+### Вытаскиваем элемент по коду (без компонента)
+$_REQUEST["ELEMENT_CODE"] настраиваем в urlrewrite
+
+	if (isset($_REQUEST["ELEMENT_CODE"])) {
+		CModule::IncludeModule('iblock');
+		$res = CIBlockElement::GetList(
+					Array(), 
+					Array("IBLOCK_ID"=>10, CODE=>$_REQUEST["ELEMENT_CODE"]), 
+					false, 
+					Array(), 
+					Array("ID", "NAME", "CODE", "PREVIEW_TEXT", "DETAIL_TEXT")
+				);
+		if($ob = $res->GetNextElement()) {
+			$arFields = $ob->GetFields();
+			$APPLICATION->AddChainItem($arFields["NAME"]);
+			$APPLICATION->SetTitle($arFields["NAME"]);
+			?>
+				<header class="title-light">
+					<h1><?=$arFields["NAME"]?></h1>
+				</header>
+				<div class="text-block-ekibastuz font-16"> 
+					<p><strong><?=$arFields["PREVIEW_TEXT"]?></strong></p>
+					<?=$arFields["DETAIL_TEXT"]?>
+				</div>
+			<?
+		} else {
+			CHTTP::SetStatus("404 Not Found");
+			@define("ERROR_404","Y");
+		}
+	}
+
 ### Пример работы с сессией
 	session_start();
 	$_SESSION['pages'][] = $_SERVER['PHP_SELF'];
