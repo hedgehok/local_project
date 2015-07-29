@@ -1,5 +1,13 @@
 # Готовые решения по битриксу из личного опыта
 
+### Примеры формирования заголовка
+      $title = '';
+      if($APPLICATION->getTitle()) $title = $APPLICATION->getTitle();
+      if($APPLICATION->getPageProperty('title')) $title = $APPLICATION->getPageProperty('title');
+      $APPLICATION->setPageProperty('title', $arResult['NAME']." - ".$arResult['SECTION_NAME']." - Проекты".$title);
+      
+      $APPLICATION->setPageProperty('title', $arResult['NAME']." - ".$arResult['SECTION_NAME']." -".$arResult['IBLOCK']['NAME']);
+
 ### Номер страницы в заголовок
       AddEventHandler('main', 'OnEpilog', array('CMainHandlers', 'OnEpilogHandler'));  
       class CMainHandlers { 
