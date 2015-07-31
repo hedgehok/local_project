@@ -17,6 +17,8 @@
 
 *Время приготовления – 50 минут*
 
+[http://pojrem.ru/vypechka/korolevskaja-vatrushka/](http://pojrem.ru/vypechka/korolevskaja-vatrushka/)
+
 ## Рулетики из свинины с сыром (пока не опробовано =) )
 
 ![](http://img.povar.ru/uploads/33/0a/8c/09/ruletiki_iz_svinini_s_sirom-177053.jpg)
