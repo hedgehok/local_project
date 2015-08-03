@@ -1,5 +1,16 @@
 # Готовые решения по битриксу из личного опыта
 
+### Простой класс реализующий редирект
+	class Utils {
+	    public static function redirect($uri = '') {
+	        header("HTTP/1.1 301 Moved Permanently");
+	        header("Location: ".$uri, TRUE, 302);
+	        exit;
+	    }
+	}
+применение:
+	Utils::redirect('ya.ru');
+
 ### Вытаскиваем элемент по коду (без компонента)
 $_REQUEST["ELEMENT_CODE"] настраиваем в urlrewrite
 
