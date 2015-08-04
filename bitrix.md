@@ -18,7 +18,22 @@
 			    'width=626,height=436'
 			);
 	});
+	var VK = {
+		Share: {
+			count: function(value, count) {
+			    //$('#vkontakte_count').html(count);
+			    $('#main-social-list').find('.social-item-counter.vk > span').html(count);
+			}
+		}
+	}
 	$.getJSON('http://vkontakte.ru/share.php?act=count&index=1&url=' + encodeURI(href) + '&callback=?', function(response) {});
+	
+объект VK нужен для авторазбора ответа от ВКшного сервера.
+Ответ поступает в виде:
+
+	VK.Share.count(1, 75);
+	
+Где 75 - количество поделившихся.
 
 ### Свойства страницы для шаринга в соцсети
 Добавляем метатеги:
