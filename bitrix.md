@@ -1,7 +1,25 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
-### Свойства страницы для шаринга в соцсети
+### Кнопка шаринга Вконтакте своими руками
+По сути кнопка шаринга состоит из двух частей - ссылка для всплывающего окна шары и счетчика количества поделившихся. Реализуем примерно так:
+	// vk
+	var $vk_link = $main_social_list.find('.social-item-link.vk')
+	$vk_link.on('click', function(e){
+		e.preventDefault();
+		window.open(
+			    'http://vk.com/share.php?url=' + encodeURIComponent(location.href)+
+			    //'&title=' + encodeURIComponent('title')+
+			    //'&description=' + encodeURIComponent('description')+
+			    //'&image=' + encodeURIComponent(document.location.origin + "/img/soc_img.jpg") +
+			    //'&noparse=1' +
+			    '',
+			    'vk-share-dialog',
+			    'width=626,height=436'
+			);
+	});
+	$.getJSON('http://vkontakte.ru/share.php?act=count&index=1&url=' + encodeURI(href) + '&callback=?', function(response) {});
 
+### Свойства страницы для шаринга в соцсети
 Добавляем метатеги:
 
 	<meta property="og:image" content="http://allsoft.ru/bitrix/templates/allsoft2011/images/8let/dragon_normal.jpg" />
