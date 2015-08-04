@@ -1,5 +1,15 @@
 # Готовые решения по битриксу из личного опыта
 
+### Свойства страницы для шаринга в соцсети
+
+Добавляем метатеги:
+
+	<meta property="og:image" content="http://allsoft.ru/bitrix/templates/allsoft2011/images/8let/dragon_normal.jpg" />
+	<meta property="og:title" content="Я – лицензионный Дракон!" />
+	<meta property="og:description" content="Результат теста: Дракон почти Ваш «конек»! Вы пока не можете преподавать Драконоведение, но на верном пути!" />
+	
+Тут подробнее: ![http://habrahabr.ru/company/softline/blog/144946/](http://habrahabr.ru/company/softline/blog/144946/)
+
 ### Простой класс реализующий редирект
 	class Utils {
 	    public static function redirect($uri = '') {
