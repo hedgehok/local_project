@@ -1,5 +1,31 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Кнопка шаринга Faceboook своими руками
+
+	var href = window.location.href,
+	    $fb_counter = $main_social_list.find('.social-item-counter.fb > span'),
+	    $fb_link = $main_social_list.find('.social-item-link.fb');
+	    
+	// fb
+	$fb_link.on('click', function(e){
+		e.preventDefault();
+		window.open(
+			    'https://www.facebook.com/sharer/sharer.php?src=sp&u=' + encodeURIComponent(location.href)+
+			    //'&t=' + encodeURIComponent('title')+
+			    //'&description=' + encodeURIComponent('description')+
+			    //'&picture=' + encodeURIComponent(document.location.origin + image) +
+			    //'&noparse=1'+
+			    '',
+			    'fb-share-dialog',
+			    'width=626,height=436'
+			);
+	});
+	$.getJSON('http://graph.facebook.com/?id=' + encodeURI(href) + '&callback=?', function(response) {
+		if (response.shares !== undefined) {
+			$fb_counter.html(response.shares);
+		}
+	});
+
 ### Кнопка шаринга Вконтакте своими руками
 По сути кнопка шаринга состоит из двух частей - ссылка для всплывающего окна шары и счетчика количества поделившихся. Реализуем примерно так:
 
