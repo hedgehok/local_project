@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Facebook обнуление кешированной share-инфы
+
+	https://developers.facebook.com/tools/debug/
+
 ### Кнопка шаринга Faceboook своими руками
 
 	var href = window.location.href,
