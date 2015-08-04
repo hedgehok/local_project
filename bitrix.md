@@ -4,7 +4,8 @@
 По сути кнопка шаринга состоит из двух частей - ссылка для всплывающего окна шары и счетчика количества поделившихся. Реализуем примерно так:
 
 	// vk
-	var $vk_link = $main_social_list.find('.social-item-link.vk')
+	var href = window.location.href,
+	    $vk_link = $main_social_list.find('.social-item-link.vk')
 	$vk_link.on('click', function(e){
 		e.preventDefault();
 		window.open(
