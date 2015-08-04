@@ -8,7 +8,7 @@
 	<meta property="og:title" content="Я – лицензионный Дракон!" />
 	<meta property="og:description" content="Результат теста: Дракон почти Ваш «конек»! Вы пока не можете преподавать Драконоведение, но на верном пути!" />
 	
-Тут подробнее: ![http://habrahabr.ru/company/softline/blog/144946/](http://habrahabr.ru/company/softline/blog/144946/)
+Тут подробнее: [http://habrahabr.ru/company/softline/blog/144946/](http://habrahabr.ru/company/softline/blog/144946/)
 
 ### Простой класс реализующий редирект
 	class Utils {
