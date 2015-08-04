@@ -5,7 +5,8 @@
 
 	// vk
 	var href = window.location.href,
-	    $vk_link = $main_social_list.find('.social-item-link.vk')
+	    $vk_link = $main_social_list.find('.social-item-link.vk');
+	    
 	$vk_link.on('click', function(e){
 		e.preventDefault();
 		window.open(
