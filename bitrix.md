@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Заморозить скролл страницы находясь на диве
+
+[http://jsbin.com/itajok](http://jsbin.com/itajok)
+
 ### Простая кастомизация скроллбара
 
 	<link href="../css/jquery.scrollbar.css" rel="stylesheet">
