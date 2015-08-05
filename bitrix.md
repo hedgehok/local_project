@@ -1,5 +1,12 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Scroll to top
+
+	$('.js-jump-top').on('click', function(e) {
+		e.preventDefault();
+		$('html, body').animate({'scrollTop': 0});
+	});
+
 ### Заморозить скролл страницы находясь на диве
 
 [http://jsbin.com/itajok](http://jsbin.com/itajok)
