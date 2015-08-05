@@ -1,5 +1,18 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Простая кастомизация скроллбара
+
+	<link href="../css/jquery.scrollbar.css" rel="stylesheet">
+	<script src="../js/jquery.scrollbar.min.js"></script>
+	
+	<div class="scrollbar-inner"> <!-- some block content --> </div>
+	
+	<script type="text/javascript">
+		$('.scrollbar-inner').scrollbar();
+	</script>
+
+[https://github.com/gromo/jquery.scrollbar/](https://github.com/gromo/jquery.scrollbar/)
+
 ### Facebook обнуление кешированной share-инфы
 
 	https://developers.facebook.com/tools/debug/
