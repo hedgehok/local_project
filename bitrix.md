@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Простой и прикольный прогресс бар
+
+	[http://ricostacruz.com/nprogress/](http://ricostacruz.com/nprogress/)
+
 ### Scroll to top
 
 	$('.js-jump-top').on('click', function(e) {
