@@ -15,6 +15,8 @@
 
 [http://ricostacruz.com/nprogress/](http://ricostacruz.com/nprogress/)
 
+Пример использования: [sorax.org](http://sorax.org/)
+
 ### Scroll to top
 
 	$('.js-jump-top').on('click', function(e) {
