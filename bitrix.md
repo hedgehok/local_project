@@ -2,9 +2,9 @@
 
 ### Почему надо юзать GetNext а не GetNextElement
 
-	GetNextElement просто обертка http://bxapi.ru/src/?module_id=iblock&name=CIBlockResult::GetNextElement Если простыми словами - вернет и поля, и свойства (хотя само является объектом). Обратитесь к документации. Не рекомендуется юзать без четкого понимания.
+GetNextElement просто обертка [http://bxapi.ru/src/?module_id=iblock&name=CIBlockResult::GetNextElement](http://bxapi.ru/src/?module_id=iblock&name=CIBlockResult::GetNextElement) Если простыми словами - вернет и поля, и свойства (хотя само является объектом). Обратитесь к документации. Не рекомендуется юзать без четкого понимания.
 	
-	GetNext - простая выборка, возвращает то, что попросили. 
+GetNext - простая выборка, возвращает то, что попросили. 
 
 ### Битрис - вывод только для админа
 Удобно успользовать для вывода отладочной инфы:
