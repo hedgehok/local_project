@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### В чем различие в результате массива ключей $arResult[NAME] от $arResult[~NAME]?
+
+С тильдой - это НЕбезопасные данные. Грубо говоря, с тильдой - это результат от Fetch, а без тильды - GetNext. Грубо говоря.
+
 ### Почему надо юзать GetNext а не GetNextElement
 
 GetNextElement просто обертка [http://bxapi.ru/src/?module_id=iblock&name=CIBlockResult::GetNextElement](http://bxapi.ru/src/?module_id=iblock&name=CIBlockResult::GetNextElement) Если простыми словами - вернет и поля, и свойства (хотя само является объектом). Обратитесь к документации. Не рекомендуется юзать без четкого понимания.
