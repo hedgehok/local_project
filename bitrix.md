@@ -1,8 +1,20 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Битрис - вывод только для админа
+Удобно успользовать для вывода отладочной инфы:
+
+	global $USER;
+	if ($USER->IsAdmin()) { echo "Что то принтим"; }
+	
+Также доступны:
+
+	if ($USER->IsAuthorized()) { // ... }
+	if (C$USER->IsOnLine()) { // ... }
+)
+
 ### Простой и прикольный прогресс бар
 
-	[http://ricostacruz.com/nprogress/](http://ricostacruz.com/nprogress/)
+[http://ricostacruz.com/nprogress/](http://ricostacruz.com/nprogress/)
 
 ### Scroll to top
 
