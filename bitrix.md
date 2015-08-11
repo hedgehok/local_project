@@ -1,5 +1,20 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Страница поиска - вариант фильтра
+
+Для примера поиск по названию и символьному коду
+
+	$q = split(' ', trim(htmlspecialchars($_REQUEST['q'])));
+	$filter = array("LOGIC" => "AND");
+	foreach ($q as $val) {
+		$filter[] = array(	
+						"LOGIC" => "OR",
+						'%NAME' => trim($val),
+						'%CODE' => trim($val)
+					);
+	}
+	$GLOBALS['arrFilter'][] = $filter;
+
 ### В чем различие в результате массива ключей $arResult[NAME] от $arResult[~NAME]?
 
 С тильдой - это НЕбезопасные данные. Грубо говоря, с тильдой - это результат от Fetch, а без тильды - GetNext. Грубо говоря.
