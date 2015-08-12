@@ -1,5 +1,9 @@
 #Вкусные рецепты, опробованные на личном опыте
 
+## Имбирный эль
+
+[http://pikabu.ru/story/imbirnyiy_yel_v_domashnikh_usloviyakh_3563078](http://pikabu.ru/story/imbirnyiy_yel_v_domashnikh_usloviyakh_3563078)
+
 ## Королевская ватрушка с творогом
 
 ![](http://pojrem.ru/img/k-588-00.jpg)
