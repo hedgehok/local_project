@@ -1,5 +1,23 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Получить элемент по коду
+
+	function GetElementByCode($IBLOCK, $ELEMENT_CODE) {
+		if(CModule::IncludeModule("iblock")) { 
+			$arSelect = Array("IBLOCK_ID", "ID", "NAME", "PREVIEW_TEXT", "PREVIEW_PICTURE", "DETAIL_TEXT", "DETAIL_PICTURE", "PROPERTY_*", "DETAIL_PAGE_URL");
+			$arFilter = Array("IBLOCK_ID"=>$IBLOCK, "ACTIVE"=>"Y", "CODE"=>$ELEMENT_CODE);
+			$res = CIBlockElement::GetList(
+				array("SORT"=>"ASC"), 
+				$arFilter, 
+				false, 
+				array(), 
+				$arSelect
+			);
+			$item = $res->GetNext();
+			return $item;
+		} 
+	}
+
 ### Страница поиска без стандартного битрикс компонента - вариант фильтра
 
 Для примера поиск по названию и символьному коду
