@@ -1,5 +1,16 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Local Redirect в битриксе
+
+	LocalRedirect('/tarifs/');
+	LocalRedirect('/tarifs/', false, '301 Moved permanently');
+
+[http://dev.1c-bitrix.ru/api_help/main/functions/other/localredirect.php](http://dev.1c-bitrix.ru/api_help/main/functions/other/localredirect.php)
+
+Через htaccess: 
+
+	RewriteRule ^tarifs/index.php$ /tarifs/ [R=301,L]
+
 ### Получить элемент по коду
 
 	function GetElementByCode($IBLOCK, $ELEMENT_CODE) {
