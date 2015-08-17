@@ -1,5 +1,16 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Создание фильтра для компонента
+
+	global $arrFilterName;
+	$arrFilterName = array("PROPERTY_NAME_CODE" => true);
+
+При вызове компонента
+
+	....
+	"FILTER_NAME" => "arrFilterName",
+	....
+
 ### Восстановление админ доступа через FTP
 
 [http://bx-cert.ru/advices/34/uteryan-parol-ot-admina-no-est-ftp/](http://bx-cert.ru/advices/34/uteryan-parol-ot-admina-no-est-ftp/)
