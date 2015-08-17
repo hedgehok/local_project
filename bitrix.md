@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Устанавливаем чистую версию 1С-Битрикс
+
+[http://bx-cert.ru/advices/34/kak-ustanovit-chistuyu-cms-1s-bitriks/](http://bx-cert.ru/advices/34/kak-ustanovit-chistuyu-cms-1s-bitriks/)
+
 ### Защита от множественных ajax запросов
 Имеем:
 1. Форму фильтра с кучей контроллов
