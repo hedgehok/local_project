@@ -13,6 +13,36 @@
 	//Запись данных в кеш, для использования в файле component_epilog.php
 	$component->setResultCacheKeys(array("KEY_ARRAY_RESULT"));
 
+Рассмотрим простейший частный пример решения проблемы. Итак, нам необходимо получить данные из связанного элемента и добавить полученный результат в кеш. Информация по связанным элементам нам нужна в компоненте news.detail. Создаем в шаблоне компонента файл result_modifier.php и помещаем следующий код:
+
+	if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+	//Подключим модуль информационные блоки
+	if (CModule::IncludeModule('iblock')) {
+	    if (isset($arResult['DISPLAY_PROPERTIES']['НАЗВАНИЕ_СВОЙСТВА'])) {
+	        //Проверим чтобы точно число было
+	        if (is_numeric($arResult['DISPLAY_PROPERTIES']['НАЗВАНИЕ_СВОЙСТВА']['VALUE'])
+	            && $arResult['DISPLAY_PROPERTIES']['НАЗВАНИЕ_СВОЙСТВА']['VALUE']) {
+	            $id = $arResult['DISPLAY_PROPERTIES']['НАЗВАНИЕ_СВОЙСТВА']['VALUE'];
+	            //Вытащим все данные по элементу
+	            $res = CIBlockElement::GetByID($id);
+	            if ($ar_res = $res->GetNext()) {
+	                if (is_numeric($ar_res['PREVIEW_PICTURE']) && $ar_res['PREVIEW_PICTURE']) {
+	                    //Тут например можем обработать превью изображение
+	                }
+	                $arResult['НОВЫЙ_КЛЮЧ_В_МАССИВЕ_РЕЗУЛЬТАТА'] = $ar_res;
+	            }
+	        }
+	    }
+	}
+	
+	$component = $this->__component;
+	//Добавим в кеш полученный результат
+	$component->setResultCacheKeys(array('НОВЫЙ_КЛЮЧ_В_МАССИВЕ_РЕЗУЛЬТАТА'));
+	
+Теперь в файле template.php и component_epilog.php будет доступна информация по связанному элементу, чтобы получить ее надо обратиться к массиву результата:
+
+	echo $arResult['НОВЫЙ_КЛЮЧ_В_МАССИВЕ_РЕЗУЛЬТАТА']['NAME'];
+
 ### Создание фильтра для компонента
 
 	global $arrFilterName;
