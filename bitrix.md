@@ -1,6 +1,6 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
-### стандартный код файла result_modifier.php
+### Стандартный код файла result_modifier.php
 
 	if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 	//Подключать модуль информационных блоков не обязательно - это для наглядности
