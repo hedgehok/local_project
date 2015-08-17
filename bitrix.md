@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Пустой компонент Bitrix - bxcert:empty
+
+[http://marketplace.1c-bitrix.ru/solutions/beono.mastercomponent/](http://marketplace.1c-bitrix.ru/solutions/beono.mastercomponent/)
+
 ### phpinfo() из админки 1С-Битрикс
 
 *Рабочий стол -> Настройки -> Инструменты -> Диагностика -> Настройки PHP*
