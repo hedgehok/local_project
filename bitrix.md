@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Как уменьшить занимаемое место системой
+
+[http://bx-cert.ru/advices/34/kak-umenshit-zanimaemoe-mesto-sistemoy-bitriks/](http://bx-cert.ru/advices/34/kak-umenshit-zanimaemoe-mesto-sistemoy-bitriks/)
+
 ### Устанавливаем чистую версию 1С-Битрикс
 
 [http://bx-cert.ru/advices/34/kak-ustanovit-chistuyu-cms-1s-bitriks/](http://bx-cert.ru/advices/34/kak-ustanovit-chistuyu-cms-1s-bitriks/)
