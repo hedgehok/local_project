@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Восстановление админ доступа через FTP
+
+[http://bx-cert.ru/advices/34/uteryan-parol-ot-admina-no-est-ftp/](http://bx-cert.ru/advices/34/uteryan-parol-ot-admina-no-est-ftp/)
+
 ### Как уменьшить занимаемое место системой 1С-Битрикс
 
 [http://bx-cert.ru/advices/34/kak-umenshit-zanimaemoe-mesto-sistemoy-bitriks/](http://bx-cert.ru/advices/34/kak-umenshit-zanimaemoe-mesto-sistemoy-bitriks/)
