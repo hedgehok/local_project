@@ -1,5 +1,18 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### стандартный код файла result_modifier.php
+
+	if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+	//Подключать модуль информационных блоков не обязательно - это для наглядности
+	if (CModule::IncludeModule('iblock')) {
+	    //Выполнение обработки данных
+	    //Тут можем работать с массивом результата $arResult
+	}
+	//Получение объекта текущего компонента
+	$component = $this->__component;
+	//Запись данных в кеш, для использования в файле component_epilog.php
+	$component->setResultCacheKeys(array("KEY_ARRAY_RESULT"));
+
 ### Создание фильтра для компонента
 
 	global $arrFilterName;
