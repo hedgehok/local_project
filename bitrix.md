@@ -1,6 +1,6 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
-### Как уменьшить занимаемое место системой
+### Как уменьшить занимаемое место системой 1С-Битрикс
 
 [http://bx-cert.ru/advices/34/kak-umenshit-zanimaemoe-mesto-sistemoy-bitriks/](http://bx-cert.ru/advices/34/kak-umenshit-zanimaemoe-mesto-sistemoy-bitriks/)
 
