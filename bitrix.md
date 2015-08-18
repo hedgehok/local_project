@@ -1,5 +1,20 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Записывает все что передадут в /bitrix/log.txt
+
+	function log_array() { 
+	   $arArgs = func_get_args(); 
+	   $sResult = ''; 
+	   foreach($arArgs as $arArg) { 
+	      $sResult .= "\n\n".print_r($arArg, true); 
+	   } 
+	
+	   if(!defined('LOG_FILENAME')) { 
+	      define('LOG_FILENAME', $_SERVER['DOCUMENT_ROOT'].'/bitrix/log.txt'); 
+	   } 
+	   AddMessage2Log($sResult, 'log_array -> '); 
+	}
+
 ### Пустой компонент Bitrix - bxcert:empty
 
 [http://marketplace.1c-bitrix.ru/solutions/beono.mastercomponent/](http://marketplace.1c-bitrix.ru/solutions/beono.mastercomponent/)
