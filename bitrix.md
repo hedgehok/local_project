@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Простая запись логов
+
+	file_put_contents($_SERVER['DOCUMENT_ROOT'].'/test.txt', print_r(func_get_args(), true));
+
 ### Проверка нахождения в разделе (как вариант)
 
 	if (strpos($_SERVER['REQUEST_URI'], '/payment/') === 0) {
