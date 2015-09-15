@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Заготовка для компонента
+
+[http://max22.ru/bitrix-structure/structure-component/](http://max22.ru/bitrix-structure/structure-component/)
+
 ### Создание контент-менеджера
 
 **Задача:** 
