@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### PHP класс. Определение местоположения. Геотаргетинг.
+
+[http://max22.ru/php-solutions/opredelenie-mestopolozheniya-geotargeting/](http://max22.ru/php-solutions/opredelenie-mestopolozheniya-geotargeting/)
+
 ### Как скрыть ссылку от индексации с помощью jQuery AJAX
 
 [http://seo-mayak.com/seo-prodvizhenie/tonkosti-prodvizheniya/kak-skryt-ssylku-ot-indeksacii-s-pomoshhyu-jquery-ajax.html](http://seo-mayak.com/seo-prodvizhenie/tonkosti-prodvizheniya/kak-skryt-ssylku-ot-indeksacii-s-pomoshhyu-jquery-ajax.html)
