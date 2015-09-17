@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Как скрыть ссылку от индексации с помощью jQuery AJAX
+
+[http://seo-mayak.com/seo-prodvizhenie/tonkosti-prodvizheniya/kak-skryt-ssylku-ot-indeksacii-s-pomoshhyu-jquery-ajax.html](http://seo-mayak.com/seo-prodvizhenie/tonkosti-prodvizheniya/kak-skryt-ssylku-ot-indeksacii-s-pomoshhyu-jquery-ajax.html)
+
 ### Заготовка для компонента
 
 [http://max22.ru/bitrix-structure/structure-component/](http://max22.ru/bitrix-structure/structure-component/)
