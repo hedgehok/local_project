@@ -1,5 +1,8 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### 25 правил .htaccess, которые должен знать каждый web-разработчик
+[http://blogerator.ru/page/fajl-primery-htaccess-redirekt-dostup](http://blogerator.ru/page/fajl-primery-htaccess-redirekt-dostup)
+
 ### PHP класс. Определение местоположения. Геотаргетинг.
 
 [http://max22.ru/php-solutions/opredelenie-mestopolozheniya-geotargeting/](http://max22.ru/php-solutions/opredelenie-mestopolozheniya-geotargeting/)
