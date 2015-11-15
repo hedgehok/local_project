@@ -1,5 +1,31 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Тюним поиск битрикс по API
+
+[http://blog.d-it.ru/dev/tunim-search-bitrix-api/](http://blog.d-it.ru/dev/tunim-search-bitrix-api/)
+
+	$obSearch = new CSearch;
+	$obSearch->SetOptions(array(//мы добавили еще этот параметр, чтобы не ругался на форматирование запроса
+	   'ERROR_ON_EMPTY_STEM' => false,
+	));
+	$obSearch->Search(array(
+	   'QUERY' => $filter['QUERY'],
+	   'SITE_ID' => SITE_ID,
+	   'MODULE_ID' => 'iblock',
+	   'PARAM2' => $iblock
+	));
+	if (!$obSearch->selectedRowsCount()) {//и делаем резапрос, если не найдено с морфологией...
+	   $obSearch->Search(array(
+	      'QUERY' => $filter['QUERY'],
+	      'SITE_ID' => SITE_ID,
+	      'MODULE_ID' => 'iblock',
+	      'PARAM2' => $iblock
+	   ), array(), array('STEMMING' => false));//... уже с отключенной морфологией
+	}  
+	while ($row = $obSearch->fetch()) {  
+	      //в $row['ITEM_ID'] у вас будут выводиться ID нужных элементов
+	}
+
 ### 25 правил .htaccess, которые должен знать каждый web-разработчик
 [http://blogerator.ru/page/fajl-primery-htaccess-redirekt-dostup](http://blogerator.ru/page/fajl-primery-htaccess-redirekt-dostup)
 
