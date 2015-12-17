@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Транслитерация CODE
+
+	"CODE" => CUtil::translit($name, LANGUAGE_ID, Array("replace_space" => "-", "replace_other" => "-"))
+
 ### Тюним поиск битрикс по API
 
 [http://blog.d-it.ru/dev/tunim-search-bitrix-api/](http://blog.d-it.ru/dev/tunim-search-bitrix-api/)
