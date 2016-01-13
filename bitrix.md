@@ -1,5 +1,11 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Вызов события
+
+	foreach(GetModuleEvents("catalog", "OnSuccessCatalogImport1C", true) as $arEvent) {
+		ExecuteModuleEventEx($arEvent);
+	}
+
 ### Транслитерация CODE
 
 	"CODE" => CUtil::translit($name, LANGUAGE_ID, Array("replace_space" => "-", "replace_other" => "-"))
