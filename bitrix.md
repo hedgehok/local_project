@@ -13,6 +13,7 @@ false - не является;
 
 Пример использования:
 
+	$IBLOCK_ID = 7;
 	$IBLOCK_OFFER_ID = false;
 
 	$mxResult = CCatalogSKU::GetInfoByProductIBlock($IBLOCK_ID);
