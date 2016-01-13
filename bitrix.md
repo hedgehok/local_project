@@ -1,5 +1,25 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Получение ID инфоблока торговых предложений
+
+	mixed CCatalogSKU::GetInfoByProductIBlock($intIBlockID)
+	
+Метод статический. $intIBlockID - ID инфоблока.
+
+Возвращает информацию о том, является ли инфоблок инфоблоком товаров.
+
+false - не является;
+Если является, то возвращается массив следующего вида: IBLOCK_ID (ID инфоблока торговых предложений), PRODUCT_IBLOCK_ID (ID инфоблока товаров), SKU_PROPERTY_ID (ID свойства привязки торговых предложений к товарам).
+
+Пример использования:
+
+	$IBLOCK_OFFER_ID = false;
+
+	$mxResult = CCatalogSKU::GetInfoByProductIBlock($IBLOCK_ID);
+	if (is_array($mxResult)){
+	    $IBLOCK_OFFER_ID = $mxResult['IBLOCK_ID'];
+	}
+
 ### Вызов события
 
 	foreach(GetModuleEvents("catalog", "OnSuccessCatalogImport1C", true) as $arEvent) {
