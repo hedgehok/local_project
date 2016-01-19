@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Установка отложенной функции
+
+[https://dev.1c-bitrix.ru/api_help/main/reference/cmain/addbuffercontent.php](CMain::AddBufferContent)
+
 ### Получение ID инфоблока торговых предложений
 
 	mixed CCatalogSKU::GetInfoByProductIBlock($intIBlockID)
