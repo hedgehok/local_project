@@ -2,7 +2,28 @@
 
 ### Установка отложенной функции
 
-[Ссылка](https://dev.1c-bitrix.ru/api_help/main/reference/cmain/addbuffercontent.php)
+[CMain::AddBufferContent](https://dev.1c-bitrix.ru/api_help/main/reference/cmain/addbuffercontent.php) создает отложенные функции.
+
+Пример кода, в котором отложенная функция не будет отрабатывать код в шаблоне как ожидается:
+
+	if (!$APPLICATION->GetTitle())
+		echo "Стандартная страница";
+	else
+		echo $APPLICATION->GetTitle();
+		
+А такой код будет работать:
+
+	$APPLICATION->AddBufferContent('ShowCondTitle');
+
+	function ShowCondTitle()
+	{
+		global $APPLICATION;
+		if (!$APPLICATION->GetTitle())
+			return "Стандартная страница";
+		else
+			return $APPLICATION->GetTitle();
+	}
+
 
 ### Получение ID инфоблока торговых предложений
 
