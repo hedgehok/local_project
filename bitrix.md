@@ -2,7 +2,7 @@
 
 ### Установка отложенной функции
 
-[https://dev.1c-bitrix.ru/api_help/main/reference/cmain/addbuffercontent.php](CMain::AddBufferContent)
+[Ссылка](https://dev.1c-bitrix.ru/api_help/main/reference/cmain/addbuffercontent.php)
 
 ### Получение ID инфоблока торговых предложений
 
