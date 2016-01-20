@@ -1,5 +1,11 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Команды git
+
+Просмотр истории коммитов
+
+	git log --pretty=format:"%h - %an, %ar : %s" --graph
+
 ### Установка отложенной функции
 
 [CMain::AddBufferContent](https://dev.1c-bitrix.ru/api_help/main/reference/cmain/addbuffercontent.php) создает отложенные функции.
