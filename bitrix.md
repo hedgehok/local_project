@@ -1,5 +1,16 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Треугольная стрелка после блока
+	.aside-menu__caption:after {
+	    content: '';
+	    position: absolute;
+	    top: 100%;
+	    left: 20px;
+	    z-index: 5;
+	    border: 10px solid transparent;
+	    border-top-color: #1178b9;
+	}
+
 ### Команды git
 
 Просмотр истории коммитов
