@@ -1,5 +1,13 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Clearfix
+
+	.clearfix:after{
+	    content:'';
+	    display:table;
+	    clear:both;
+	}
+
 ### Треугольная стрелка после блока
 	.aside-menu__caption:after {
 	    content: '';
