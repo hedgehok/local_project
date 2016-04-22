@@ -1,5 +1,29 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Создание своей сущности
+
+	namespace SomePartner\MyBooksCatalog;
+
+	use Bitrix\Main\Entity;
+	
+	class BookTable extends Entity\DataManager
+	{
+	    public static function getTableName()
+	    {
+	        return 'my_book';
+	    }
+	    
+	    public static function getMap()
+	    {
+	        return array(
+	            new Entity\IntegerField('ID'),
+	            new Entity\StringField('ISBN'),
+	            new Entity\StringField('TITLE'),
+	            new Entity\DateField('PUBLISH_DATE')
+	        );
+	    }
+	}
+
 ### Clearfix
 
 	.clearfix:after{
