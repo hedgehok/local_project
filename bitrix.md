@@ -1,5 +1,19 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Выражения ExpressionField
+
+Предусмотрено не только хранение данных как есть, но и их преобразование при выборке. Допустим, возникла потребность наравне с датой издания сразу же получать возраст книги в днях. Хранить это число в БД накладно: придется каждый день пересчитывать обновлять данные. Можно просто считать возраст на стороне базы данных:
+
+	SELECT DATEDIFF(NOW(), PUBLISH_DATE) AS AGE_DAYS FROM my_book
+	
+Для этого нужно описать в сущности виртуальное поле, значение которого базируется на SQL-выражении с другим полем или полями:
+
+	new Entity\ExpressionField('AGE_DAYS',
+	    'DATEDIFF(NOW(), %s)', array('PUBLISH_DATE')
+	)
+
+Примечание: в качестве плейсхолдеров рекомендуется использовать `%s` или `%1$s`, `%2$s` и так далее. Например, когда в выражении EXPR участвует несколько полей (FIELD_X + FIELD_Y) * FIELD_X, то выражение можно описать так: '(%s + %s) * %s', [FIELD_X, FIELD_Y, FIELD_X]; или так: '(%1$s + %2$s) * %1$s', [FIELD_X, FIELD_Y].
+
 ### Создание своей сущности
 
 	namespace SomePartner\MyBooksCatalog;
@@ -16,8 +30,13 @@
 	    public static function getMap()
 	    {
 	        return array(
-	            new Entity\IntegerField('ID'),
-	            new Entity\StringField('ISBN'),
+	            new Entity\IntegerField('ID', array(
+			    'primary' => true,
+			    'autocomplete' => true
+			)),
+	            new Entity\StringField('ISBN', array(
+			    'required' => true
+			)),
 	            new Entity\StringField('TITLE'),
 	            new Entity\DateField('PUBLISH_DATE')
 	        );
