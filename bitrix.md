@@ -1,5 +1,27 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Получить ID секции по коду
+
+	protected function getSectionIdByCode($sectionCode = "")
+	{
+		$sectionId = 0;
+
+		if ($sectionCode !== '')
+			return $sectionId;
+
+		$sectionFilter = array(
+			"IBLOCK_ID" => $this->arParams['IBLOCK_ID'],
+			"IBLOCK_ACTIVE" => "Y",
+		);
+
+		$sectionFilter["=CODE"] = $sectionCode;
+		$sectionIt = CIBlockSection::getList(array(), $sectionFilter, false, array("ID"));
+		if ($section = $sectionIt->Fetch())
+			$sectionId = $section['ID'];
+
+		return $sectionId;
+	}
+
 ### Еще
 
 	if (!$this->isAjax())
