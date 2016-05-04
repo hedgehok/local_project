@@ -1,5 +1,51 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Вывод кешированного контента
+
+	$opening = '';
+	ob_start();
+	if($APPLICATION->GetProperty('FULLWIDTH') != 'Y') {?>
+	<div class="columns">
+		<div class="layout__aside-col">
+			<?$APPLICATION->IncludeComponent(
+				"bitrix:main.include", 
+				".default", 
+				array(
+					"AREA_FILE_SHOW" => "sect",
+					"AREA_FILE_SUFFIX" => "leftcolumn",
+					"AREA_FILE_RECURSIVE" => "Y",
+					"EDIT_TEMPLATE" => "standard.php",
+					"COMPONENT_TEMPLATE" => ".default"
+				),
+				false
+			);?>
+		</div>
+		<div class="layout__main-col">
+	<?}
+	$opening = ob_get_contents();
+	ob_end_clean();
+	$closing = '';
+	ob_start();
+	if($APPLICATION->GetProperty('FULLWIDTH') != 'Y') { ?>
+	    </div>
+	</div>
+	<? }
+	$closing = ob_get_contents();
+	ob_end_clean();
+	$APPLICATION->AddViewContent('OpenLeftColumn',$opening);
+	$APPLICATION->AddViewContent('CloseLeftColumn',$closing);
+	
+В хедере
+	
+	<?
+	// this content is in the end of footer.php - open columns and set left column
+	$APPLICATION->ShowViewContent('OpenLeftColumn');
+	<?
+	
+В футере
+
+	<?$APPLICATION->ShowViewContent('CloseLeftColumn');?>
+
 ### Получить ID секции по элементу
 
 	protected function getSectionIdByElement($elementId, $elementCode = '')
