@@ -1,5 +1,31 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Получить ID секции по элементу
+
+	protected function getSectionIdByElement($elementId, $elementCode = '')
+	{
+		$sectionId = 0;
+		$elementId = (int)$elementId;
+		$elementCode = (string)$elementCode;
+		$filter = array('=IBLOCK_ID' => $this->arParams['IBLOCK_ID']);
+
+		if ($elementId > 0)
+			$filter['=ID'] = $elementId;
+		elseif ($elementCode !== '')
+			$filter['=CODE'] = $elementCode;
+		else
+			return $sectionId;
+
+		$itemIterator = Iblock\ElementTable::getList(array(
+			'select' => array('ID', 'IBLOCK_SECTION_ID'),
+			'filter' => $filter
+		));
+		if ($item = $itemIterator->fetch())
+			$sectionId = (int)$item['IBLOCK_SECTION_ID'];
+
+		return $sectionId;
+	}
+
 ### Получить ID секции по коду
 
 	protected function getSectionIdByCode($sectionCode = "")
