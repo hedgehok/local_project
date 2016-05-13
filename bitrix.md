@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Google Speed Test
+
+[https://developers.google.com/speed/pagespeed/insights/](https://developers.google.com/speed/pagespeed/insights/)
+
 ### Вывод кешированного контента
 
 	$opening = '';
