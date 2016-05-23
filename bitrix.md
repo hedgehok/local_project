@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Водяной знак
+
+[http://bxit.ru/development/bitrix-coding/skripty-bitriks/watermark-bitrix/](http://bxit.ru/development/bitrix-coding/skripty-bitriks/watermark-bitrix/)
+
 ### Автозаполнение минимальной и максимальной цены товара
 
 	AddEventHandler("iblock", "OnBeforeIBlockElementUpdate", "MinMaxSKUPriceUpdate");
