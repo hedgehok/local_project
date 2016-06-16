@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Делаем свой JavaScript чистым
+
+[http://prgssr.ru/development/delaem-svoj-javascript-chistym.html](http://prgssr.ru/development/delaem-svoj-javascript-chistym.html)
+
 ### Загрузка шрифтов
 
 [http://web-standards.ru/articles/web-font-loading-patterns/?ct=t(hamail_20160615)](http://web-standards.ru/articles/web-font-loading-patterns/?ct=t(hamail_20160615))
