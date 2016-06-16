@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Загрузка шрифтов
+
+[http://web-standards.ru/articles/web-font-loading-patterns/?ct=t(hamail_20160615)](http://web-standards.ru/articles/web-font-loading-patterns/?ct=t(hamail_20160615))
+
 ### Водяной знак
 
 [http://bxit.ru/development/bitrix-coding/skripty-bitriks/watermark-bitrix/](http://bxit.ru/development/bitrix-coding/skripty-bitriks/watermark-bitrix/)
