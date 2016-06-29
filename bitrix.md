@@ -14,6 +14,12 @@
 	Options +FollowSymLinks
 	RewriteEngine on
 	RewriteRule (.*) http://www.arnavel.ru/$1 [R=301,L]
+	
+	RewriteEngine on
+	RewriteCond %{REQUEST_FILENAME} robots.txt$ [NC]
+	RewriteRule ^([^/]+) $1 [L]
+	RewriteCond %{HTTP_HOST} ^(www\.)?aliss\.ru$
+	RewriteRule ^(.*)$ http://www.arnavel.ru/$1 [R=301,L]
 
 ### Делаем свой JavaScript чистым
 
