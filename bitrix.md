@@ -1,5 +1,20 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Примеры 301 редиректа
+
+	RewriteCond %{http_host} www\.okna.szdl.ru
+	RewriteCond %{REQUEST_URI} ^contacts/mytishi/index.php$
+	RewriteRule ^(.*)$ http://www.mytischi.okna.szdl.ru/$1 [R=301,L]
+	
+	RewriteCond %{http_host} okna.szdl.ru
+	RewriteCond %{REQUEST_URI} !bitrix
+	#RewriteCond %{REQUEST_URI} /akcii-skidki/(.*)$
+	RewriteRule ^(.*)\.php$ /$1/ [R=301,L]
+	
+	Options +FollowSymLinks
+	RewriteEngine on
+	RewriteRule (.*) http://www.arnavel.ru/$1 [R=301,L]
+
 ### Делаем свой JavaScript чистым
 
 [http://prgssr.ru/development/delaem-svoj-javascript-chistym.html](http://prgssr.ru/development/delaem-svoj-javascript-chistym.html)
