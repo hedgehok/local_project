@@ -1,5 +1,9 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Битрикс вывод цены
+
+	<?=SaleFormatCurrency(strip_tags(str_replace(' ','',$arItem["PRICE"])), $arItem["CURRENCY"], true)?>
+
 ### Примеры 301 редиректа
 
 	RewriteCond %{http_host} www\.okna.szdl.ru
