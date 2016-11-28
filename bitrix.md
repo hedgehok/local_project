@@ -1,5 +1,25 @@
 # Готовые решения по PHP и 1С-Битрикс из личного опыта
 
+### Возвращает ID инфоблока по коду или false
+
+	/**
+	 * @param $code
+	 * @return int|bool
+	 * Возвращает ID инфоблока по его коду или false
+	 */
+	if(!function_exists('getIblockIdByCode')) {
+	    function getIblockIdByCode($code) {
+		if (CModule::IncludeModule("iblock") && isset($code) && !empty($code)) {
+		    $res = CIBlock::GetList(array(), array("CODE" => $code), false);
+		    if ($ar_res = $res->Fetch()) {
+			return $ar_res['ID'];
+		    }
+		}
+
+		return false;
+	    }
+	}
+
 ### Битрикс вывод цены
 
 	<?=SaleFormatCurrency(strip_tags(str_replace(' ','',$arItem["PRICE"])), $arItem["CURRENCY"], true)?>
