@@ -12,7 +12,7 @@
 		if (CModule::IncludeModule("iblock") && isset($code) && !empty($code)) {
 		    $res = CIBlock::GetList(array(), array("CODE" => $code), false);
 		    if ($ar_res = $res->Fetch()) {
-			return $ar_res['ID'];
+		    	return $ar_res['ID'];
 		    }
 		}
 
