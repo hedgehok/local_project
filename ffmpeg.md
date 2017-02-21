@@ -4,4 +4,4 @@
 
 ### Порезать видео на картинки
 
-  ffmpeg -i video.mpg image%d.jpg
+    ffmpeg -i video.mpg image%d.jpg
