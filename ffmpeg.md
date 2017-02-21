@@ -11,3 +11,7 @@
 ### Извлечь звуковую дорожку из видео и сохранить в mp3
 
     ffmpeg -i source_video.avi -vn -ar 44100 -ac 2 -ab 192K -f mp3 sound.mp3
+
+### Конвертировать .gif (без сжатия)
+
+    ffmpeg -i video_origine.avi gif_anime.gif
