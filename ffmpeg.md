@@ -2,6 +2,8 @@
 
 Саму утилиту скачиваем отсюда: [https://ffmpeg.org/](https://ffmpeg.org/)
 
+Часть идей отсюда [https://habrahabr.ru/post/171213/](https://habrahabr.ru/post/171213/)
+
 ### Порезать видео на картинки
 
     ffmpeg -i video.mpg image%d.jpg
